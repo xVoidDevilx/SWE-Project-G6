@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lottery Simulator</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<nav>
+    <image src="images/logo.png" alt="logo" class="logo">
+</nav>
+<body>
+    <div class="options">
+        <ul class="buttonList">
+            <button id="games" class="menuButton">Draw Games</button>
+            <button id="tickets" class="menuButton">Scratch Tickets</button>
+            <button id="login" onclick="login()" class="menuButton" style="display: none;">Login</button>
+            <button id="profile" class="menuButton" style="display: none;">Profile</button>
+            <button id="logout" onclick="logout()" class="menuButton" style="display: none;">Logout</button>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="image-container">
+            <img src="images/holiday-perfect-gift.jpg" alt="holiday-perfect-gift" class="mainImage">
+            <img src="images/mm_branding.png" alt="branding" class="mainImage">
+            <img src="images/gift_responsibly_2023.jpg" alt="gift_responsibly_2023" class="mainImage">
+        </div>
+        <button class="carousel-control left">◀︎</button>
+        <button class="carousel-control right">▶︎</button>
+    </div>
+
+    <bottomArea class="bottomArea">
+        <div class="bottomImageContainer" id="gamesBottom">
+            <img src="images/games.jpg" alt="games" class="bottomImage">
+            <div class="imageOverlay">Games</div>
+        </div>
+        <div class="bottomImageContainer" id="ticketsBottom">
+            <img src="images/ticketScratch.jpg" id="scratch-tickets" alt="scratch tickets" class="bottomImage">
+            <div class="imageOverlay">Tickets</div>
+        </div>
+        <div class="bottomImageContainer" id="checkNumbers">
+            <img src="images/checkNumbers.jpg" alt="check your numbers" class="bottomImage">
+            <div class="imageOverlay">Check your numbers</div>
+        </div>
+    </bottomArea>
+</body>
+<script src="javascript/index.js"></script>
+</html>
