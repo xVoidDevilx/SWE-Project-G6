@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lottery Simulator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<nav>
+    <image src="../images/logo.png" alt="logo" class="logo">
+</nav>
+<body>
+    <!-- Login Container -->
+    <div class="container" id="login">
+        <form class="forms">
+            <h1>Login</h1>
+            <hr>
+            <input class = 'loginInput' type="text" placeholder="Enter Username" id="login-username" name="login-username" required>
+            <div class="password-container">
+                <input class = 'loginInput'type="password" placeholder="Enter Password" id="login-password" name="login-password" required>
+            </div>
+            <hr>
+            <div id="login-error-msg" style="color:red; display:none;"></div>
+            <button type="button" id="login-submit-btn">Login</button>
+            <p>Don't have an account? <button id="signupbtn">Sign up here</button></p>
+        </form>
+    </div>
+
+    <!-- Signup Container -->
+    <div class="container" id="signup" style="display: none;">
+        <form class="forms">
+            <h1>Sign Up</h1>
+            <hr>
+            <input class = 'loginInput' type="text" placeholder="Enter Email" id="signup-email" name="signup-email" required>
+            <input class = 'loginInput' type="text" placeholder="Username" id="signup-username" name="signup-username" required>
+            <input class = 'loginInput' type="password" placeholder="Enter Password" id="signup-password" name="signup-password" required>
+            <input class = 'loginInput' type="password" placeholder="Re-Enter Password" id="reenter-password" name="reenter-password" required>
+            <hr>
+            <button type="button" id="signup-submit-btn">Sign Up!</button>
+        <div id="signup-error-msg" style="color:red; display:none;"></div>
+        <p>Already have an account? <button id="loginbtn">Login here</button></p>
+        </form>
+    </div>
+</body>
+<script type="module" src="../javascript/login.js"></script>
+</html>

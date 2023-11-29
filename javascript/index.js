@@ -24,7 +24,7 @@ document.querySelector('.carousel-control.left').addEventListener('click', moveT
 document.querySelector('.carousel-control.right').addEventListener('click', moveToNextImage);
 
 function startAutoScroll() {
-    autoScrollInterval = setInterval(moveToNextImage, 3000); // Change image every 3 seconds
+    autoScrollInterval = setInterval(moveToNextImage, 5000); // Change image every 5 seconds
 }
 
 function stopAutoScroll() {
@@ -53,8 +53,8 @@ function checkLoginStatus() {
     }
 }
 function login() {
-    localStorage.setItem('isLoggedIn', 'true');
-    window.location.href = 'index.html';
+    // localStorage.setItem('isLoggedIn', 'true');
+    window.location.href = 'pages/login-signup.html';
 }
 function logout() {
     localStorage.setItem('isLoggedIn', 'false');
@@ -82,4 +82,8 @@ document.getElementById('gamesBottom').addEventListener('click', function() {
 
 document.getElementById('ticketsBottom').addEventListener('click', function() {
     window.location.href = 'pages/tickets.html';
+});
+
+document.querySelector('.logo').addEventListener('click', function() {
+    window.location.href = 'index.html';
 });

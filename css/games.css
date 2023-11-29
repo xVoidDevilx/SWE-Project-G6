@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-color: #002776;
+    width: 100%;
+    padding: 1em; 
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+}
+
+.logo{
+    width: 20%;
+    height: auto;
+    max-width: 100%;
+    cursor: pointer;
+}
+.options{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.buttonList{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content:center;
+}
+.menuButton{
+    padding: 3px;
+    margin: 1rem;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+.menuButton:hover{
+    color: yellow;
+}
+
+.mainImage {
+    flex: 0 0 100vw;
+    width: 100vw;
+    height: auto;
+    max-width: 100%;
+    flex-shrink: 0;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: auto;
+}
+
+.image-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: auto;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 24px;
+    color: white;
+    z-index: 100;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control.left {
+    left: 10px;
+}
+
+.carousel-control.right {
+    right: 10px;
+}

@@ -1,0 +1,8 @@
+
+
+
+const gameData = [
+    {
+        game: 'Powerball', 
+    }
+]
