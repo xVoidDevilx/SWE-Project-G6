@@ -1,3 +1,18 @@
+const gameData = [
+    {
+        game: 'Powerball', price:"$15", jackpot:"$374,000,000", drawDate:"12/1/2023", imageSRC:"https://i.imgur.com/xEpAlA5.png"
+    },
+    {
+        game: 'Mega Millions', price:"$13", jackpot:"$355,000,000", drawDate:"12/1/2023", imageSRC:"https://i.imgur.com/BTrhEMe.jpg"
+
+    },
+    {
+        game: 'Lotto Texas', price:"$8", jackpot:"$25,750,000", drawDate:"12/1/2023", imageSRC:"https://i.imgur.com/UZrBt1v.png"
+    },
+    {
+        game: 'Texas Two Step', price:"$5", jackpot:"$200,000", drawDate:"12/1/2023", imageSRC:"https://i.imgur.com/O1KF6TG.png"
+    }
+]
 document.querySelector('.logo').addEventListener('click', function() {
     window.location.href = '../index.html';
 });
@@ -82,3 +97,36 @@ document.getElementById('tickets').addEventListener('click', function() {
 document.querySelector('.logo').addEventListener('click', function() {
     window.location.href = '../index.html';
 });
+
+// Function to create a table row for each game
+function createTableRows() {
+    const table = document.querySelector('.gameTable'); // Select the table
+
+    gameData.forEach(game => {
+        // Create a table row
+        const row = document.createElement('tr');
+        row.id = game.game.replace(/\s+/g, '-'); // Replace spaces with hyphens for the id
+
+        // Add the columns (td) to the row
+        row.innerHTML = `
+            <td class="content"><img src="${game.imageSRC}" class="cardImage" style="width: 100%; height: auto;"></td>
+            <td class="content">${game.game}</td>
+            <td class="content">${game.jackpot}</td>
+            <td class="content">${game.price}</td>
+            <td class="content">${game.drawDate}</td>
+            <td><button class="cardButton" onclick="buyNowClicked('${game.game}')">Buy Now</button></td>
+        `;
+
+        // Append the row to the table
+        table.appendChild(row);
+    });
+}
+
+// Function to handle the button click event
+function buyNowClicked(gameName) {
+    console.log(gameName + ' Buy Now clicked');
+    // Handle the click event (e.g., navigate to a purchase page)
+}
+
+// Call the function to create the rows when the page loads
+document.addEventListener('DOMContentLoaded', createTableRows);
