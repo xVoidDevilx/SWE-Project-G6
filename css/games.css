@@ -126,3 +126,50 @@ nav {
 .content{
     font-size: 20px;
 }
+
+#modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    width: fit-content;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 5px solid #002776;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+.ball{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    text-align: center;
+
+}
+form{
+    margin: 1rem;
+}
+#exit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    cursor: pointer;
+    color: #002776;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+button{
+    cursor: pointer;
+}
+
+#modalImage{
+    max-width: 60%;
+}
